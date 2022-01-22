@@ -1,4 +1,4 @@
-function Validation(){
+function Validation() {
     //Kiểm Tra rỗng
     this.checkEmpty = function (value, spanID, message) {
         // trim() xóa dấu khoảng trắng ở đầu và sau đoạn chữ
@@ -15,7 +15,7 @@ function Validation(){
     }
     this.checkID = function (value, spanID, message, mang) {
         var isExist = false;
-        isExist = mang.some(function (info) {
+        isExist = mang.some((info) => {
             return info.taiKhoan == value;
         });
         if (isExist) {
@@ -78,6 +78,20 @@ function Validation(){
     }
     this.checkSelect = function (selectID, spanID, message) {
         if (document.getElementById(selectID).selectedIndex != 0) {
+            document.getElementById(spanID).innerHTML = "";
+            document.getElementById(spanID).style.display = "none";
+            return true;
+        }
+        else {
+            // ko đúng định dạng
+            document.getElementById(spanID).innerHTML = message;
+            document.getElementById(spanID).style.display = "block";
+            return false;
+        }
+    }
+    this.check60 = function (selectID, spanID, message) {
+        var pattent = /^.{1,60}$/;
+        if (pattent.test(value)) {
             document.getElementById(spanID).innerHTML = "";
             document.getElementById(spanID).style.display = "none";
             return true;

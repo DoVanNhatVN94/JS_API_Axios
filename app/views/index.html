@@ -125,26 +125,31 @@
             </button>
           </div>
           <!-- Modal body -->
-          <div class="modal-body">
+          <form class="modal-body" id="foodForm">
             <div class="form-group">
               <label>Tài khoản</label>
               <input id="TaiKhoan" class="form-control" placeholder="Nhập vào tài khoản" />
+              <span id="spanTaiKhoan" class="text-danger"></span>
             </div>
             <div class="form-group">
               <label>Họ tên</label>
               <input id="HoTen" class="form-control" placeholder="Nhập vào họ tên" />
+              <span id="spanHoTen" class="text-danger"></span>
             </div>
             <div class="form-group">
               <label>Mật khẩu</label>
               <input id="MatKhau" class="form-control" placeholder="Nhập vào mật khẩu" type="password" />
+              <span id="spanMatKhau" class="text-danger"></span>
             </div>
             <div class="form-group">
               <label>Email</label>
               <input id="Email" class="form-control" placeholder="Nhập vào Email" />
+              <span id="spanEmail" class="text-danger"></span>
             </div>
             <div class="form-group">
               <label>Hình Ảnh</label>
               <input id="HinhAnh" class="form-control" placeholder="Nhập vào hình ảnh" />
+              <span id="spanHinhAnh" class="text-danger"></span>
             </div>
             <div class="form-group">
               <label for="">Loại Người Dùng: </label>
@@ -153,6 +158,7 @@
                 <option value="GV">Giáo viên</option>
                 <option value="HV">Học viên</option>
               </select>
+              <span id="spanloaiNguoiDung" class="text-danger"></span>
             </div>
             <div class="form-group">
               <label for="">Loại Ngôn Ngữ: </label>
@@ -166,13 +172,14 @@
                 <option>SWEDEN</option>
                 <option>SPANISH</option>
               </select>
+              <span id="spanloaiNgonNgu" class="text-danger"></span>
             </div>
             <div class="form-group">
               <label>Mô tả</label>
               <textarea name="" id="MoTa" class="form-control" placeholder="Nhập vào mô tả"></textarea>
-
+              <span id="spanMoTa" class="text-danger"></span>
             </div>
-          </div>
+          </form>
           <!-- Modal footer -->
           <div class="modal-footer"></div>
         </div>
@@ -200,13 +207,15 @@
   <script src="https://code.highcharts.com/modules/series-label.js"></script>
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-  <!-- axios JS -->
+  <!-- axios  -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+  <!-- Validation js  -->
+  <script src="../services/Validation.js"></script>
   <!-- Services JS -->
   <script src="../services/AdminService.js"></script>
   <!-- <Nguoi Dung JS > -->
-    <script src="../models/NguoiDung.js"></script>
+  <script src="../models/NguoiDung.js"></script>
 
   <!-- Main JS -->
   <script src="../controllers/main.js"></script>
