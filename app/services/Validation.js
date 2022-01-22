@@ -89,9 +89,10 @@ function Validation() {
             return false;
         }
     }
-    this.check60 = function (selectID, spanID, message) {
-        var pattent = /^.{1,60}$/;
-        if (pattent.test(value)) {
+    this.check60 = function (value, spanID, message) {
+        var mang = [];
+        mang = value.split(' ');
+        if (mang.length<= 60) {
             document.getElementById(spanID).innerHTML = "";
             document.getElementById(spanID).style.display = "none";
             return true;
@@ -105,3 +106,8 @@ function Validation() {
     }
 
 }
+
+let str = "Tôi yêu em";
+let arr = str.split(' ');
+
+console.log(arr.length);

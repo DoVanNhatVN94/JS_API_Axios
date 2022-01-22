@@ -130,7 +130,7 @@ function xemChiTiet(id) {
     infoPeople.layID(id)
         .then(function (result) {
 
-            console.log("thanh cong", result.data);
+            console.log(result.data);
 
 
             document.getElementById("TaiKhoan").value = result.data.taiKhoan;
@@ -191,7 +191,7 @@ function capNhapNguoiDung(id) {
 
         infoPeople.capNhap(id, info)
             .then(function (result) {
-                console.log("thành công", result.data);
+                console.log(result.data);
                 layDSSP();
                 //UX : Tắt modal boostrap
                 document.querySelector("#myModal .close").click();
@@ -215,7 +215,7 @@ function resetSpan() {
 
 let reset = () => {
     resetSpan();
-    document.getElementById("myModal").reset();
+    document.getElementById("foodForm").reset();
     document.getElementById("TaiKhoan").disabled = false;
 }
 
